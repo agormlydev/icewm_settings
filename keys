@@ -1,0 +1,29 @@
+key "XF86AudioLowerVolume"      pactl set-sink-volume @DEFAULT_SINK@ -5%
+key "XF86AudioRaiseVolume"      pactl set-sink-volume @DEFAULT_SINK@ +5%
+key "XF86AudioMute"             pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+key "XF86MonBrightnessDown"     ~/scripts/brightness_down.sh
+key "XF86MonBrightnessUp"       ~/scripts/brightness_up.sh
+
+key "Super+Shift+Left"          icesh -f restore left top      sizeto 1268 1046     move    0 1086
+key "Super+Shift+Right"         icesh -f restore right top     sizeto 1268 1046     move 1273 1086
+key "Super+Shift+Down"          icesh -f restore move 597 1096 sizeto 1355  731
+key "Super+Shift+Up"            icesh -f maximize
+
+key "Super+Left"                icesh -f moveby -10  0
+key "Super+Right"               icesh -f moveby  10  0
+key "Super+Up"                  icesh -f moveby  0 -10
+key "Super+Down"                icesh -f moveby  0  10
+
+key "Super+Ctrl+Left"           icesh -f sizeby  10  0  moveby -10  0
+key "Super+Ctrl+Right"          icesh -f sizeby -10  0  moveby  10  0
+key "Super+Ctrl+Up"             icesh -f sizeby  0  10  moveby  0 -10
+key "Super+Ctrl+Down"           icesh -f sizeby  0 -10  moveby  0  10
+
+key "Super+Alt+Left"            icesh -f sizeby -10  0 
+key "Super+Alt+Right"           icesh -f sizeby  10  0
+key "Super+Alt+Up"              icesh -f sizeby  0 -10
+key "Super+Alt+Down"            icesh -f sizeby  0  10
+
+key "Super+Shift+Enter"         xterm
+key "Super+R"                   dmenu_run

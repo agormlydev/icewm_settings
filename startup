@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# sleep a second to avoid issues with monitors not being available yet
+    sleep 1
+
+# disable touchpad
+    xinput set-prop 11 "Device Enabled" 0
+
+# setup display assuming laptop is plugged into dock with wide monitor and normal monitor above the wide monitor
+    xrandr --output eDP-1 --auto --pos 597x2172 --output DP-1-1 --auto --pos 0x1086 --output DP-1-3 --auto --pos 320x0
+
+# start terminal
+#    bash &
+
+# start chrome
+#    google-chrome-stable &
+
+# start vs code
+    # code &
+
+# start android studio
+#    /usr/local/android-studio/bin/studio.sh &
+
+# start intellij idea
+# issues with key shortcuts being in qwerty instead of dvorak so starting manually for now instead
+#    /usr/bin/idea-IC-221.6008.13/bin/idea.sh &
+
+# start dmenu
+    dmenu_run &
